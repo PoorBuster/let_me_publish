@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLT Limited</title>
+
+<link rel="stylesheet" href="./css/home.css" type="text/css">
+<link rel="stylesheet" href="./css/home900px.css" type="text/css" media="screen and (max-width: 900px)">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+	<div id="page"> 
+		<header id="top">
+		<div id="logo">
+		<div id="img_inner" >
+			<a href="./top.html"><img src="img/Logo.png"  id="offset"></a>
+			<a href="./top.html"><img src="img/FLT Inder.jpg" id="flt"></a>
+			<div class="menu-icon" id="menu-icon">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			  </div>
+		
+	
+		<div class="block reveal">
+		<div class="gonav reveal-inner">
+			<ul id="nav" class="topnav">
+				<li id="firstchild"><a href="./About/about.html" class="nav-a">About FLT</a></li>
+				<li id="second"><div class="dropdown" ><span id="fafa"><span class="fa fa-plus" id="fafacon">&emsp;</span><span class="fa fa-minus" id="fafacon2">&emsp;</span></span><a href="./service/service-FLEX.html" class="nav-a">Our Service</a>
+						  <div class="dropdown-content ddc" id="dropdown-content-mobile">
+						<a href="./service/IT/flexbox/IT serviceFLEX.html" class="nav-a item">IT Service</a>
+						<a href="./service/secretary/secretary.html" class="nav-a item">Secretary</a>
+						<a href="./service/cleaning/pika.html" class="nav-a item">Cleaning Service</a>
+						<a href="./service/CS/CS.html" class="nav-a item">Customer Support</a>
+						  </div>
+					</div class="dropdown">
+				</li>
+				<li id="third"><a href="./careers/career.html" class="nav-a">Careers</a></li>
+				<li id="fourth"><a href="./inquiry/inquiry.html" class="nav-a">Inquiry</a></li>
+				<li id="lastchild"><a href="https://ordinary-shoe-6614.glideapp.io/" class="nav-a">GoMi App</a></li>
+			<!--language button for mobile-->
+		<li class="lang-switch"><a href="./top_J.html"><div class="opabox">Japanese</div></a></li>	
+
+			</ul>
+				
+			</div>
+		</div>
+	</div id="img_inner">
+    
+<div class="dropdownT">
+	<button id="myBtn" class="dropbtnT" >English &nbsp;&nbsp; 
+	  <img src="img/2whFlip.svg" id="toggle-arrow"></button>
+	<div id="myDropdown" class="dropdown-contentT">
+	  <a href="./top_J.html">日本語</a>
+	</div>
+</div>
+<img src="img/WhatsApp Busi QRcode.jpg" id="whataspp-QR">
+
+</div id="logo">
+</header id="top">
+	
+	
+	<div id="body">	
+		<div id="bg"></div id="bg">
+	
+	<div id="for-no-hiding">
+		<img src="./img/bg-img.jpg" id="top-img">
+	<p id="title">With our most sincerity</p>
+	<br>
+	<div id="p1">
+	<p>To expand the business, it takes cost and time. It's also has a risk.<br>
+		If you are focusing on your business and no time <br>to handle your office work and customer support, <br>
+		it's the right time for you to consider FLT for assistance !<br><br>
+		FLT can provide different services by our Japanese customer support team. <br>
+		We aim to improve customer satisfaction based on the customer's point of view. <br>
+		With the use of the existing skills and experiences of FLT, <br>
+		we can assist you to further expand and develop your business.
+		<br><br>
+		FLT will work as one to support your hopes.</p>
+	</div id="p1">
+	</div>
+	
+	</div id="body">
+
+	  
+
+
+<footer id="footer">
+<p id=copyright>
+<small>©2016-2022 by FLT Limited</small>
+</p id=copyright>
+</footer id="footer">
+
+</div id="page">
+
+
+<script>
+// Get the button, and when the user clicks on it, execute myFunction
+/*document.getElementById("myBtn").onclick = function() {myFunction()};*/
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+
+/*for language button*/
+document.getElementById("myBtn").addEventListener("click", myFunction);
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+          document.getElementById("myDropdown").style.borderRadius="0px 0px 10px 10px";
+          document.getElementById("myBtn").style.borderRadius="10px 10px 0px 0px";
+        
+          var x = document.getElementById("myDropdown");
+          var b = document.getElementById("myBtn"); 
+          var imgs = document.getElementById("toggle-arrow");
+          let toggle = true;
+            toggle = !toggle;
+          if (x.style.display === "block") {
+            x.style.display = "none";
+            b.style.borderRadius="10px 10px 10px 10px";
+            imgs.src='img\\2whFlip.svg';
+          } else {
+            x.style.display = "block";
+            imgs.src='img\\2wh.svg';
+            x.style.borderTop = "2px solid brown";
+          }
+  
+      }
+	  
+      document.addEventListener("click", function(e){
+        var b = document.getElementById("myBtn"); 
+        var imgs = document.getElementById("toggle-arrow");
+        const lol = document.querySelector(".dropbtnT");
+        const drop = document.querySelector("#myDropdown");
+     if(e.target != lol){
+       drop.style.display = "none";
+       b.style.borderRadius="10px 10px 10px 10px";
+       imgs.src='img\\2whFlip.svg';
+     }
+});
+/* for hamburger menu*/
+document.getElementById("menu-icon").addEventListener("click", myFunction2);
+function myFunction2() {
+	document.getElementById("menu-icon").classList.toggle("change");
+	
+  var menu = document.getElementById("nav");
+    menu.classList.toggle("responsive");
+	let toggle = true;
+    toggle = !toggle;
+	if (menu.style.width === "50vw") {
+		closeNav();
+	} else {
+		openNav();
+	}
+}
+/* Set the width of the side navigation to 250px*/
+function openNav() {
+  document.getElementById("nav").style.width = "50vw";
+}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("nav").classList.remove("responsive");
+  document.getElementById("nav").style.width = "500px";
+} 
+
+
+/*dropdown in our service for mobile*/
+document.getElementById("fafa").addEventListener("touchstart", myFunction3);
+    function myFunction3() {
+	var dropdown = document.getElementById("fafacon");
+	var dropdownContent = document.querySelector("#dropdown-content-mobile");
+    dropdownContent.classList.toggle("ddc");
+    let toggle = true;
+    toggle = !toggle;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+	  dropdown.style.display = "inline-block";
+	  document.getElementById("fafacon2").style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+	  document.getElementById("fafacon2").style.display = "inline-block";
+	  dropdown.style.display = "none";
+    }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
